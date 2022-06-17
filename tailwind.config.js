@@ -4,6 +4,13 @@ const windmill = require('@windmill/react-ui/config')
 module.exports = windmill({
   purge: ['src/**/*.js'],
   theme: {
+    colors: {
+      'primary': '#785FD3',
+      'slimgreen': '#169B32',
+      'malachite': '#1FDD47',
+      'secondary': '#A2A5AC',
+      'danger': '#e3342f',
+    },
     extend: {
       fontFamily: {
         sans: ['Inter', ...defaultTheme.fontFamily.sans],

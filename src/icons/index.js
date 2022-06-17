@@ -26,12 +26,20 @@ import { ReactComponent as DropdownIcon } from './dropdown.svg'
 import { ReactComponent as OutlinePersonIcon } from './outlinePerson.svg'
 import { ReactComponent as OutlineCogIcon } from './outlineCog.svg'
 import { ReactComponent as OutlineLogoutIcon } from './outlineLogout.svg'
+import { ReactComponent as ProfileAvatarIcon } from './profileAvatar.svg'
+import { ReactComponent as FacebookIcon } from './facebook.svg'
+import { ReactComponent as InstagramIcon } from './instagram.svg'
+import { ReactComponent as DribbbleIcon } from './dribbble.svg'
+import { ReactComponent as ArrowCircleLeft } from './arrowcircleleft.svg'
 
 export {
   ButtonsIcon,
   CardsIcon,
   ChartsIcon,
   FormsIcon,
+  FacebookIcon,
+  InstagramIcon,
+  DribbbleIcon,
   HomeIcon,
   ModalsIcon,
   PagesIcon,
@@ -56,4 +64,6 @@ export {
   OutlinePersonIcon,
   OutlineCogIcon,
   OutlineLogoutIcon,
+  ProfileAvatarIcon,
+  ArrowCircleLeft
 }

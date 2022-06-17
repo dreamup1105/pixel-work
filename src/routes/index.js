@@ -1,9 +1,11 @@
 import { lazy } from 'react'
 
 // use lazy for better code splitting, a.k.a. load faster
-const Dashboard = lazy(() => import('../pages/Dashboard'))
-const Forms = lazy(() => import('../pages/Forms'))
-const Cards = lazy(() => import('../pages/Cards'))
+const JobListing = lazy(() => import('../pages/JobListing'))
+const Applications = lazy(() => import('../pages/Applications'))
+const AddJob = lazy(() => import('../pages/AddJob'))
+const Profile = lazy(() => import('../pages/Profile'))
+const EditProfile = lazy(() => import('../pages/EditProfile'))
 const Charts = lazy(() => import('../pages/Charts'))
 const Buttons = lazy(() => import('../pages/Buttons'))
 const Modals = lazy(() => import('../pages/Modals'))
@@ -23,16 +25,25 @@ const Blank = lazy(() => import('../pages/Blank'))
  */
 const routes = [
   {
-    path: '/dashboard', // the url
-    component: Dashboard, // view rendered
+    path: '/joblistings', // the url
+    component: JobListing, // view rendered
   },
   {
-    path: '/forms',
-    component: Forms,
+    path: '/applications',
+    component: Applications,
   },
   {
-    path: '/cards',
-    component: Cards,
+    path: '/applications/addjob',
+    component: AddJob,
+  },
+  {
+    path: '/profile',
+    component: Profile,
+  },
+  ,
+  {
+    path: '/profile/edit',
+    component: EditProfile,
   },
   {
     path: '/charts',

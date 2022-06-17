@@ -14,19 +14,21 @@ function SidebarContent() {
   return (
     <div className="py-4 text-gray-500 dark:text-gray-400">
       <a className="ml-6 text-lg font-bold text-gray-800 dark:text-gray-200" href="#">
-        Windmill
+        <span>Pixel</span><span>Work.io</span>
       </a>
       <ul className="mt-6">
+        <li className="relative px-2 py-3"><button className="flex items-center h-8 w-4/5 rounded-full bg-slimgreen text-black mb-auto mt-auto text-white relative px-6 py-3">
+          <Icon className="w-5 h-5 mr-4" aria-hidden="true" icon='FormsIcon' /><span className="text-white">Post Job</span></button></li>
         {routes.map((route) =>
           route.routes ? (
             <SidebarSubmenu route={route} key={route.name} />
           ) : (
-            <li className="relative px-6 py-3" key={route.name}>
+            <li className="relative px-8 py-3" key={route.name}>
               <NavLink
                 exact
                 to={route.path}
-                className="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                activeClassName="text-gray-800 dark:text-gray-100"
+                className="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-gray-600 hover:text-white dark:hover:text-gray-200"
+                activeClassName="text-white dark:text-gray-100"
               >
                 <Route path={route.path} exact={route.exact}>
                   <span
@@ -41,14 +43,6 @@ function SidebarContent() {
           )
         )}
       </ul>
-      <div className="px-6 my-6">
-        <Button>
-          Create account
-          <span className="ml-2" aria-hidden="true">
-            +
-          </span>
-        </Button>
-      </div>
     </div>
   )
 }
