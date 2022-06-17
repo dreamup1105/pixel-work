@@ -16,6 +16,7 @@ import {
 } from '../icons'
 import RoundIcon from '../components/RoundIcon'
 import response from '../utils/demo/jobData'
+import Avatar1 from '../assets/img/avatar1.png'
 import {
   Avatar,
   Badge,
@@ -28,6 +29,7 @@ import {
   doughnutLegends,
   lineLegends,
 } from '../utils/demo/chartsData'
+import { toBeRequired } from '@testing-library/jest-dom'
 
 function JobListing() {
   const [page, setPage] = useState(1)
@@ -66,18 +68,31 @@ function JobListing() {
           </div>
         </div>
       </div>
-      <div className="flex flex-wrap">
-        {data.map((user, i) => (
-          <Card className="flex h-48">
-            <img className="object-cover w-1/3" src="/img/forest.jpeg" />
-            <CardBody>
-              <p className="mb-4 font-semibold text-gray-600 dark:text-gray-300">Revenue</p>
+      <div className="flex flex-wrap grid grid-cols-2 sm:grid-cols-3 gap-2">
+        {data.map((job, i) => (
+          <Card className="flex flex-col p-5" key={i}>
+            <div className="flex flex-row justify-between">
+              <div className="flex flex-col">
+                <span className="text-gray-600 text-sm">{job.team}</span>
+                <span className="text-black-500 text-xl font-semibold">{job.position}</span>
+              </div>
+              <div className="job-avatar">
+                <img className="object-cover w-full" src={Avatar1} />
+              </div>
+            </div>
+            <div className="mt-5">
+              <span className="text-black text-base">{job.fromPrice} - {job.toPrice}</span>
+            </div>
+            <div className="mt-5">
               <p className="text-gray-600 dark:text-gray-400">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga, cum commodi a omnis numquam
                 quod? Totam exercitationem quos hic ipsam at qui cum numquam, sed amet ratione! Ratione, nihil
                 dolorum.
               </p>
-            </CardBody>
+            </div>
+            <div className="w-full mt-8">
+              <button className="rounded rounded-full w-45 bg-opacity-25 py-2 mr-2 bg-malachite text-slimgreen mb-auto mt-auto px-3">{job.type}</button>
+            </div>
           </Card>
         ))}
       </div>

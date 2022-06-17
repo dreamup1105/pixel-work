@@ -31,6 +31,8 @@ import { ReactComponent as FacebookIcon } from './facebook.svg'
 import { ReactComponent as InstagramIcon } from './instagram.svg'
 import { ReactComponent as DribbbleIcon } from './dribbble.svg'
 import { ReactComponent as ArrowCircleLeft } from './arrowcircleleft.svg'
+import { ReactComponent as PhoneIcon } from './phone.svg'
+import { ReactComponent as ListsIcon } from './lists.svg'
 
 export {
   ButtonsIcon,
@@ -65,5 +67,7 @@ export {
   OutlineCogIcon,
   OutlineLogoutIcon,
   ProfileAvatarIcon,
-  ArrowCircleLeft
+  ArrowCircleLeft,
+  PhoneIcon,
+  ListsIcon
 }

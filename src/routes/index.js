@@ -4,6 +4,7 @@ import { lazy } from 'react'
 const JobListing = lazy(() => import('../pages/JobListing'))
 const Applications = lazy(() => import('../pages/Applications'))
 const AddJob = lazy(() => import('../pages/AddJob'))
+const ApplicantsList = lazy(() => import('../pages/ApplicantsList'))
 const Profile = lazy(() => import('../pages/Profile'))
 const EditProfile = lazy(() => import('../pages/EditProfile'))
 const Charts = lazy(() => import('../pages/Charts'))
@@ -35,6 +36,10 @@ const routes = [
   {
     path: '/applications/addjob',
     component: AddJob,
+  },
+  {
+    path: '/applications/lists/:id',
+    component: ApplicantsList,
   },
   {
     path: '/profile',

@@ -10,6 +10,7 @@ module.exports = windmill({
       'malachite': '#1FDD47',
       'secondary': '#A2A5AC',
       'danger': '#e3342f',
+      'warning': '#F9530B'
     },
     extend: {
       fontFamily: {

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import { Button } from '@windmill/react-ui'
 import CTA from '../components/CTA'
 import InfoCard from '../components/Cards/InfoCard'
@@ -34,6 +34,7 @@ function JobListing() {
   const [page, setPage] = useState(1)
   const [data, setData] = useState([])
 
+  const navigate = useHistory();
   // pagination setup
   const resultsPerPage = 10
   const totalResults = response.length
@@ -41,6 +42,12 @@ function JobListing() {
   // pagination change control
   function onPageChange(p) {
     setPage(p)
+  }
+
+  //show applicants for the job
+  function showApplicants(id) {
+    console.log("Who are you", id)
+    navigate.push("/app/applications/lists/" + id);
   }
 
   // on page change, load new sliced data
@@ -75,29 +82,29 @@ function JobListing() {
             </tr>
           </TableHeader>
           <TableBody>
-            {data.map((user, i) => (
+            {data.map((job, i) => (
               <TableRow key={i}>
                 <TableCell>
                   <div className="flex items-center text-sm">
                     <input type="checkbox" className="hidden mr-3 md:block"></input>
                     <div>
-                      <p className="font-semibold">{user.name}</p>
-                      <p className="text-xs text-gray-600 dark:text-gray-400">{user.job}</p>
+                      <p className="font-semibold">{job.name}</p>
+                      <p className="text-xs text-gray-600 dark:text-gray-400">{job.job}</p>
                     </div>
                   </div>
                 </TableCell>
                 <TableCell>
-                  <button className="h-8 bg-slimgreen rounded text-white mb-auto mt-auto px-2">{user.applicants} applicants</button>
+                  <button className="h-8 bg-slimgreen rounded text-white mb-auto mt-auto px-2" onClick={() => showApplicants(i)} key={i}>{job.applicants} applicants</button>
                 </TableCell>
                 <TableCell>
-                  <Badge type={user.status}><button className="flex flex-row justify-center items-center h-8 rounded-full border border-gray-400 text-black mb-auto mt-auto px-2"><input type="radio" className="bg-slimgreen radio-button hidden mr-1 md:block" checked></input>{user.status}</button></Badge>
+                  <Badge type={job.status}><button className="flex flex-row justify-center items-center h-8 rounded-full border border-gray-400 text-black mb-auto mt-auto px-2"><input type="radio" className="bg-slimgreen radio-button hidden mr-1 md:block" checked></input>{job.status}</button></Badge>
                 </TableCell>
                 <TableCell>
-                  <Badge type={user.type}>
-                    <button className="h-8 rounded-full border border-gray-400 text-black mb-auto mt-auto px-2">{user.type}</button></Badge>
+                  <Badge type={job.type}>
+                    <button className="h-8 rounded-full border border-gray-400 text-black mb-auto mt-auto px-2">{job.type}</button></Badge>
                 </TableCell>
                 <TableCell>
-                  <span className="text-sm">{user.date}</span>
+                  <span className="text-sm">{job.date}</span>
                 </TableCell>
               </TableRow>
             ))}
