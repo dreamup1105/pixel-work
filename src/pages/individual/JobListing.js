@@ -1,16 +1,38 @@
 import React, { useState, useEffect } from 'react'
-import { Link, useHistory, useParams } from 'react-router-dom'
-import { Card } from '@windmill/react-ui'
+import { Link, useHistory } from 'react-router-dom'
+import { Button, Card, CardBody, Input } from '@windmill/react-ui'
 import PageTitle from '../components/Typography/PageTitle'
 import {
   SearchIcon,
+  MoonIcon,
+  SunIcon,
+  BellIcon,
+  MenuIcon,
+  OutlinePersonIcon,
+  OutlineCogIcon,
+  OutlineLogoutIcon,
   GridLayoutIcon,
   DropListIcon,
   DropMenuIcon,
   ListShowIcon
 } from '../icons'
+import RoundIcon from '../components/RoundIcon'
 import response from '../utils/demo/jobData'
 import Avatar1 from '../assets/img/avatar1.png'
+import {
+  Avatar,
+  Badge,
+  Pagination,
+} from '@windmill/react-ui'
+
+import {
+  doughnutOptions,
+  lineOptions,
+  doughnutLegends,
+  lineLegends,
+} from '../utils/demo/chartsData'
+import { toBeRequired } from '@testing-library/jest-dom'
+import { AutoFocusInside } from 'react-focus-lock'
 
 function JobListing() {
   const [page, setPage] = useState(1)
@@ -19,8 +41,7 @@ function JobListing() {
   // pagination setup
   const resultsPerPage = 10
   const totalResults = response.length
-  // get the url params
-  const { id } = useParams();
+
   // pagination change control
   function onPageChange(p) {
     setPage(p)
@@ -36,17 +57,6 @@ function JobListing() {
   function viewjob(i) {
     navigation.push('joblistings/viewjob/' + `${i}`);
   }
-  //search function
-  const [search, setNewSearch] = useState("");
-  const handleSearchChange = (e) => {
-    setNewSearch(e.target.value);
-  };
-  const filtered = !search
-    ? data
-    : data.filter((job) =>
-      job.team.toLowerCase().includes(search.toLowerCase()) || job.type.toLowerCase().includes(search.toLowerCase())
-    );
-  console.log("fff", filtered)
   return (
     <>
       <div className="flex flex-row justify-between">
@@ -60,7 +70,6 @@ function JobListing() {
             </div>
             <input
               className="z-10 pl-8 mt-5 text-gray-700 w-4/5 h-10 border rounded-3xl"
-              type="text" value={search} onChange={handleSearchChange}
               placeholder="Search by company title and job key.........." style={{ borderRadius: 24 }}
               aria-label="Search"
             ></input>
@@ -115,7 +124,7 @@ function JobListing() {
         </div>
       </div>
       <div className="flex flex-wrap grid grid-cols-2 mt-3 sm:grid-cols-3 gap-2">
-        {filtered.map((job, i) => (
+        {data.map((job, i) => (
           <Card className="flex flex-col p-5" key={i} onClick={() => viewjob(i)}>
             <div className="flex flex-row justify-between">
               <div className="flex flex-col">

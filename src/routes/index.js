@@ -2,6 +2,7 @@ import { lazy } from 'react'
 
 // use lazy for better code splitting, a.k.a. load faster
 const JobListing = lazy(() => import('../pages/JobListing'))
+const ViewJob = lazy(() => import('../pages/ViewJob'))
 const Applications = lazy(() => import('../pages/Applications'))
 const AddJob = lazy(() => import('../pages/AddJob'))
 const ApplicantsList = lazy(() => import('../pages/ApplicantsList'))
@@ -28,6 +29,14 @@ const routes = [
   {
     path: '/joblistings', // the url
     component: JobListing, // view rendered
+  },
+  {
+    path: '/joblistings/:id', // the url
+    component: JobListing, // view rendered
+  },
+  {
+    path: '/joblistings/viewjob/:id', // the url
+    component: ViewJob, // view rendered
   },
   {
     path: '/applications',

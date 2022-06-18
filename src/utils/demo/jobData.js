@@ -9,7 +9,7 @@ export default [
         type: "remote"
     },
     {
-        team: "Magximu Team",
+        team: "ARAZAS",
         position: "Database Programmer",
         avatar: "../assets/img/avatar1.png",
         fromPrice: "$14,000",
@@ -18,7 +18,7 @@ export default [
         type: "Freelance"
     },
     {
-        team: "Magximu Team",
+        team: "ADA Studio",
         position: "Database Programmer",
         avatar: "../assets/img/avatar1.png",
         fromPrice: "$14,000",

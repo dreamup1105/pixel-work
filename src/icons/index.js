@@ -30,9 +30,22 @@ import { ReactComponent as ProfileAvatarIcon } from './profileAvatar.svg'
 import { ReactComponent as FacebookIcon } from './facebook.svg'
 import { ReactComponent as InstagramIcon } from './instagram.svg'
 import { ReactComponent as DribbbleIcon } from './dribbble.svg'
+import { ReactComponent as LinkedInIcon } from './linkedin.svg'
+import { ReactComponent as OtherSocialIcon } from './othersocial.svg'
 import { ReactComponent as ArrowCircleLeft } from './arrowcircleleft.svg'
 import { ReactComponent as PhoneIcon } from './phone.svg'
 import { ReactComponent as ListsIcon } from './lists.svg'
+import { ReactComponent as GridLayoutIcon } from './gridlayout.svg'
+import { ReactComponent as DropListIcon } from './droplist.svg'
+import { ReactComponent as DropMenuIcon } from './dropmenu.svg'
+import { ReactComponent as ListShowIcon } from './listshow.svg'
+import { ReactComponent as EditJobIcon } from './editjob.svg'
+import { ReactComponent as PixelCompIcon } from './pixelcomp.svg'
+import { ReactComponent as LinkIcon } from './link.svg'
+import { ReactComponent as ViewJobIcon } from './viewjob.svg'
+import { ReactComponent as DeleteIcon } from './delete.svg'
+import { ReactComponent as JobSeekerIcon } from './jobseeker.svg'
+import { ReactComponent as BusinessIcon } from './business.svg'
 
 export {
   ButtonsIcon,
@@ -42,6 +55,8 @@ export {
   FacebookIcon,
   InstagramIcon,
   DribbbleIcon,
+  LinkedInIcon,
+  OtherSocialIcon,
   HomeIcon,
   ModalsIcon,
   PagesIcon,
@@ -69,5 +84,16 @@ export {
   ProfileAvatarIcon,
   ArrowCircleLeft,
   PhoneIcon,
-  ListsIcon
+  ListsIcon,
+  GridLayoutIcon,
+  DropListIcon,
+  DropMenuIcon,
+  ListShowIcon,
+  EditJobIcon,
+  PixelCompIcon,
+  LinkIcon,
+  ViewJobIcon,
+  DeleteIcon,
+  JobSeekerIcon,
+  BusinessIcon
 }

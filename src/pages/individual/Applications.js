@@ -17,7 +17,6 @@ import {
 } from '@windmill/react-ui'
 
 function JobListing() {
-  const jobpos = localStorage.getItem("jobpos");
   const [page, setPage] = useState(1)
   const [data, setData] = useState([])
 
@@ -45,14 +44,9 @@ function JobListing() {
   return (
     <>
       <div className="flex flex-row justify-between">
-        {
-          jobpos == 0 ?
-            <PageTitle>Applications</PageTitle>
-            :
-            <PageTitle>All Applied Application</PageTitle>
-        }
+        <PageTitle>All Jobs</PageTitle>
         <Link className="mb-auto mt-auto" to="/app/applications/addjob">
-          <button className="h-8 bg-slimgreen rounded text-white mb-auto mt-auto px-3">
+          <button className="h-8 bg-slimgreen rounded text-white mb-auto mt-auto px-2">
             <span className="pl-auto pr-auto" aria-hidden="true">
               +
             </span>

@@ -1,6 +1,6 @@
 import React from 'react'
 import routes from '../../routes/sidebar'
-import { NavLink, Route } from 'react-router-dom'
+import { NavLink, Route, useHistory } from 'react-router-dom'
 import * as Icons from '../../icons'
 import SidebarSubmenu from './SidebarSubmenu'
 import { Button } from '@windmill/react-ui'
@@ -11,13 +11,19 @@ function Icon({ icon, ...props }) {
 }
 
 function SidebarContent() {
+
+  const navigate = useHistory();
+  const routeChange = () => {
+    let path = `/app/applications/addjob/`;
+    navigate.push(path);
+  }
   return (
     <div className="py-4 text-gray-500 dark:text-gray-400">
-      <a className="ml-6 text-lg font-bold text-gray-800 dark:text-gray-200" href="#">
+      <a className="ml-6 text-lg font-bold text-white text-2xl dark:text-white-700" href="/app/joblistings">
         <span>Pixel</span><span>Work.io</span>
       </a>
       <ul className="mt-6">
-        <li className="relative px-2 py-3"><button className="flex items-center h-8 w-4/5 rounded-full bg-slimgreen text-black mb-auto mt-auto text-white relative px-6 py-3">
+        <li className="relative px-2 py-3"><button onClick={routeChange} className="flex items-center h-8 w-4/5 rounded-full bg-slimgreen text-black mb-auto mt-auto text-white relative px-6 py-3">
           <Icon className="w-5 h-5 mr-4" aria-hidden="true" icon='FormsIcon' /><span className="text-white">Post Job</span></button></li>
         {routes.map((route) =>
           route.routes ? (

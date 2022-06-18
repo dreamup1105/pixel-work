@@ -37,7 +37,6 @@ function JobListing() {
 
     //show applicants for the job
     function showApplicants(id) {
-        console.log("Who are you", id)
         navigate.push("/app/applications/lists/" + id);
     }
 

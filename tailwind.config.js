@@ -3,6 +3,10 @@ const windmill = require('@windmill/react-ui/config')
 
 module.exports = windmill({
   purge: ['src/**/*.js'],
+  corePlugins: {
+    // ...
+    outline: false,
+  },
   theme: {
     colors: {
       'primary': '#785FD3',
