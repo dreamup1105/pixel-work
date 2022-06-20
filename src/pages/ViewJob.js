@@ -11,7 +11,8 @@ import {
     OtherSocialIcon,
     EditJobIcon,
     PixelCompIcon,
-    LinkIcon
+    LinkIcon,
+    DateIcon
 }
     from '../icons'
 import data from '../utils/demo/jobData'
@@ -20,7 +21,7 @@ function ViewJob(props) {
     const history = useHistory();
     let job_id = props.match.params.id
     function backPage() {
-        history.push("/app/applications")
+        history.push("/app/joblistings")
     }
     return (
         <>
@@ -30,12 +31,19 @@ function ViewJob(props) {
                         <ArrowCircleLeft onClick={backPage}></ArrowCircleLeft>
                         <span>Back</span>
                     </div>
-                    <div className="ml-2">
-                        <span>Post Job</span>
+                    <div className="flex flex-row ml-2 justify-center items-center">
+                        <DateIcon className="mr-1"></DateIcon>
+                        <span className="mr-1 text-gray-400">Post Date:</span>
+                        <span>9 Jun 2022</span>
+                    </div>
+                    <div className="flex flex-row ml-2 justify-center items-center">
+                        <DateIcon className="mr-1"></DateIcon>
+                        <span className="mr-1 text-gray-400">Last Date:</span>
+                        <span> 19 Jun 2022</span>
                     </div>
                 </div>
-                <div className="flex flex-row mt-2 space-x-4">
-                    <div className="flex w- bg-white w-8/12 flex-col p-4 space-y-4">
+                <div className="flex flex-col md:flex-row mt-2 space-y-4 md:space-x-4">
+                    <div className="flex bg-white w-full md:w-8/12 flex-col p-4 space-y-4">
                         <div className="w-full">
                             <span className="uppercase text-gray-600">Job Description</span>
                         </div>
@@ -72,7 +80,7 @@ function ViewJob(props) {
                             <OtherSocialIcon></OtherSocialIcon>
                         </div>
                     </div>
-                    <div className="flex relative flex-1 bg-white w-3/12 flex-col p-4">
+                    <div className="flex relative flex-1 bg-white w-3/12 flex-col mt-0 p-4">
                         <div className="flex flex-row  justify-between visit-site relative">
                             <PixelCompIcon></PixelCompIcon>
                             <div className="relative flex flex-row absolute right-0 space-x-1">

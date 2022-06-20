@@ -1,5 +1,80 @@
-button:focus {
-    /* outline: none !important; */
-    background: red;
-    /* outline: 1px dotted; */
+.apply-Closed[type='radio'] {
+  -webkit-appearance: none !important;
+  width: 20px !important;
+  height: 20px !important;
+  border: 2px solid #785FD3 !important;
+  border-radius: 50% !important;
+  outline: none;
+  /* box-shadow: 0 0 5px 0px gray inset !important; */
+}
+
+.apply-Closed[type='radio']:hover {
+  /* box-shadow: 0 0 5px 0px orange inset !important; */
+}
+
+.apply-Closed[type='radio']:before {
+  content: '' !important;
+  display: block !important;
+  width: 60% !important;
+  height: 60% !important;
+  margin: 20% auto !important;
+  border-radius: 50% !important;
+}
+
+.apply-Closed[type='radio']:checked:before {
+  background: #785FD3 !important;
+}
+
+
+.apply-Open[type='radio'] {
+  -webkit-appearance: none !important;
+  width: 20px !important;
+  height: 20px !important;
+  border: 2px solid #169B32 !important;
+  border-radius: 50% !important;
+  outline: none;
+}
+
+.apply-Open[type='radio']:hover {
+  /* box-shadow: 0 0 5px 0px orange inset !important; */
+}
+
+.apply-Open[type='radio']:before {
+  content: '' !important;
+  display: block !important;
+  width: 60% !important;
+  height: 60% !important;
+  margin: 20% auto !important;
+  border-radius: 50% !important;
+}
+
+.apply-Open[type='radio']:checked:before {
+  background: #169B32 !important;
+}
+
+.apply-Cancelled[type='radio'] {
+  -webkit-appearance: none !important;
+  width: 20px !important;
+  height: 20px !important;
+  border: 2px solid #F9530B !important;
+  border-radius: 50% !important;
+  outline: none;
+  /* box-shadow: 0 0 5px 0px gray inset !important; */
+}
+
+.apply-Cancelled[type='radio']:hover {
+  /* box-shadow: 0 0 5px 0px orange inset !important; */
+}
+
+.apply-Cancelled[type='radio']:before {
+  content: '' !important;
+  display: block !important;
+  width: 60% !important;
+  height: 60% !important;
+  margin: 20% auto !important;
+  border-radius: 50% !important;
+}
+
+.apply-Cancelled[type='radio']:checked:before {
+  background: #F9530B !important;
 }

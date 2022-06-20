@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link, useHistory } from 'react-router-dom'
-import { PhoneIcon, MailIcon, ArrowCircleLeft } from '../icons'
+import { PhoneIcon, MailIcon, ArrowCircleLeft, DropdownIcon } from '../icons'
 import response from '../utils/demo/applicantsData'
 import {
     TableBody,
@@ -49,7 +49,7 @@ function JobListing() {
 
     return (
         <>
-            <div className="flex flex-col bg-white mx-12 my-12 px-16 py-8">
+            <div className="flex flex-col bg-white my-12 px-8 py-8 overflow-hidden">
                 <div className="flex flex-row justify-between">
                     <div className="flex flex-row mb-2">
                         <div className="flex flex-row space-x-1 text-gray-600 text-base">
@@ -102,7 +102,7 @@ function JobListing() {
                                             <button className="h-8 rounded-full border border-gray-400 text-black mb-auto mt-auto px-2">{applicant.type}</button></Badge>
                                     </TableCell>
                                     <TableCell>
-                                        <Badge type={applicant.status}><button className="flex flex-row justify-center items-center h-8 rounded-full border border-gray-400 text-black mb-auto mt-auto px-2"><input type="radio" className="bg-slimgreen radio-button hidden mr-1 md:block" checked></input>{applicant.status}</button></Badge>
+                                        <Badge type={applicant.status}><button className="flex flex-row justify-center items-center h-8 rounded-full border border-gray-400 text-black mb-auto mt-auto px-2"><input type="radio" className="bg-slimgreen radio-button hidden mr-1 md:block" checked></input>{applicant.status}<DropdownIcon className="ml-2"></DropdownIcon></button></Badge>
                                     </TableCell>
                                     <TableCell>
                                         <button className="h-8 bg-primary rounded text-white mb-auto mt-auto px-2">

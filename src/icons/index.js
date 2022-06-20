@@ -46,6 +46,7 @@ import { ReactComponent as ViewJobIcon } from './viewjob.svg'
 import { ReactComponent as DeleteIcon } from './delete.svg'
 import { ReactComponent as JobSeekerIcon } from './jobseeker.svg'
 import { ReactComponent as BusinessIcon } from './business.svg'
+import { ReactComponent as DateIcon } from './date.svg'
 
 export {
   ButtonsIcon,
@@ -95,5 +96,6 @@ export {
   ViewJobIcon,
   DeleteIcon,
   JobSeekerIcon,
-  BusinessIcon
+  BusinessIcon,
+  DateIcon
 }

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 import PageTitle from '../components/Typography/PageTitle'
-import { ViewJobIcon, DeleteIcon, EditJobIcon } from '../icons'
+import { ViewJobIcon, DeleteIcon, EditJobIcon, DropdownIcon } from '../icons'
 import response from '../utils/demo/tableData'
 import {
   TableBody,
@@ -20,6 +20,7 @@ function JobListing() {
   const jobpos = localStorage.getItem("jobpos");
   const [page, setPage] = useState(1)
   const [data, setData] = useState([])
+  // const [radioColors, Set]
 
   const navigate = useHistory();
   // pagination setup
@@ -52,7 +53,7 @@ function JobListing() {
             <PageTitle>All Applied Application</PageTitle>
         }
         <Link className="mb-auto mt-auto" to="/app/applications/addjob">
-          <button className="h-8 bg-slimgreen rounded text-white mb-auto mt-auto px-3">
+          <button className="h-auto md:h-8 bg-slimgreen rounded text-white mb-auto mt-auto px-3">
             <span className="pl-auto pr-auto" aria-hidden="true">
               +
             </span>
@@ -88,7 +89,7 @@ function JobListing() {
                   <button className="h-8 bg-slimgreen rounded text-white mb-auto mt-auto px-2" onClick={() => showApplicants(i)} key={i}>{job.applicants} applicants</button>
                 </TableCell>
                 <TableCell>
-                  <Badge type={job.status}><button className="flex flex-row justify-center items-center h-8 rounded-full border border-gray-400 text-black mb-auto mt-auto px-2"><input type="radio" className="bg-slimgreen radio-button hidden mr-1 md:block" checked></input>{job.status}</button></Badge>
+                  <Badge type={job.status}><button className="flex flex-row justify-center items-center h-8 rounded-full border border-gray-400 text-black mb-auto mt-auto px-2"><input type="radio" className={`apply-${job.status} radio-button hidden mr-1 md:block`} checked></input>{job.status}<DropdownIcon className="ml-2"></DropdownIcon></button></Badge>
                 </TableCell>
                 <TableCell>
                   <Badge type={job.type}>

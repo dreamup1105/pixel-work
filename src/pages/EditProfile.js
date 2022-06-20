@@ -8,14 +8,14 @@ import RoundIcon from '../components/RoundIcon'
 function EditProfile() {
     return (
         <>
-            <div className="flex flex-row bg-white h-36 mx-12 my-12 px-2 py-4 justify-between items-center">
+            <div className="flex flex-row bg-white h-36 my-12 px-2 py-4 justify-between items-center">
                 <span>Profile information</span>
                 <div className="flex flex-row">
-                    <button className="rounded w-32 py-2 mr-2 bg-gray-200 text-black-400 mb-auto mt-auto px-2">Cancel</button>
-                    <button className="rounded w-45 py-2 mr-2 bg-malachite text-white mb-auto mt-auto px-2">Save Changes</button>
+                    <button className="rounded w-1/2 md:w-32 py-2 mr-2 bg-gray-200 text-black-400 mb-auto mt-auto px-2">Cancel</button>
+                    <button className="rounded w-1/2 md:w-45 py-2 mr-2 bg-malachite text-white mb-auto mt-auto px-2">Save Changes</button>
                 </div>
             </div>
-            <div className="flex flex-col bg-white mx-12 my-12 px-16 py-8">
+            <div className="flex flex-col bg-white my-12 px-8 py-8">
                 <div className="flex flex-row">
                     <div className="mr-3">
                         <RoundIcon
@@ -26,9 +26,10 @@ function EditProfile() {
                             className="mr-4"
                         />
                     </div>
-                    <button className="rounded w-45 py-2 mr-2 bg-slimgreen text-white mb-auto mt-auto px-2">Upload new picture</button>
-                    <button className="rounded w-32 py-2 mr-2 bg-gray-200 text-black-400 mb-auto mt-auto px-2">Delete</button>
-
+                    <div className="flex flex-col md:flex-row">
+                        <button className="rounded w-auto md:w-45 py-2 mr-2 bg-slimgreen text-white mb-auto mt-auto px-2">Upload new picture</button>
+                        <button className="rounded w-auto md:w-32 py-2 mr-2 bg-gray-200 text-black-400 mb-auto mt-auto px-2">Delete</button>
+                    </div>
                 </div>
                 <div className="flex flex-col mt-16 gap-2">
                     <span className="font-bold">Generals</span>
@@ -60,35 +61,39 @@ function EditProfile() {
                             <div className="flex flex-row items-center gap-2 h-12 text-black mb-auto mt-auto px-2">
                                 <FacebookIcon></FacebookIcon>Facebook
                             </div>
-                            <div className="flex flex-row gap-2">
-                                <input type="text" className="pl-2 h-8 mt-auto mb-auto rounded border border-gray-400" placeholder="Enter Username"></input>
-                                <div>Submit</div>
-                                <span className="font-bold">x</span>
+                            <div className="flex flex-col md:flex-row gap-2">
+                                <input type="text" className="pl-2 h-8 mt-auto mb-auto rounded border border-gray-400" placeholder="Enter Username" style={{ width: '144px' }}></input>
+                                <div className="flex flex-row gap-2">
+                                    <span>Submit</span>
+                                    <span className="font-bold">x</span>
+                                </div>
                             </div>
                         </div>
                         <div className="flex flex-row items-center justify-between gap-4">
                             <div className="flex flex-row items-center gap-2 h-12 text-black mb-auto mt-auto px-2">
                                 <InstagramIcon></InstagramIcon>Instagram</div>
-                            <div className="flex flex-row gap-2">
-                                <input type="text" className="pl-2 h-8 mt-auto mb-auto rounded border border-gray-400" placeholder="Enter Username"></input>
-                                <div>Submit</div>
-                                <span className="font-bold">x</span>
+                            <div className="flex flex-col md:flex-row gap-2">
+                                <input type="text" className="pl-2 h-8 mt-auto mb-auto rounded border border-gray-400" placeholder="Enter Username" style={{ width: '144px' }}></input>
+                                <div className="flex flex-row gap-2">
+                                    <span>Submit</span>
+                                    <span className="font-bold">x</span>
+                                </div>
                             </div>
                         </div>
                         <div className="flex flex-row items-center justify-between gap-4">
                             <div className="flex flex-row items-center gap-2 h-12 text-black mb-auto mt-auto px-2">
                                 <TwitterIcon></TwitterIcon>Twitter</div>
-                            <div className="flex flex-row gap-2">
-                                <input type="text" className="pl-2 h-8 mt-auto mb-auto rounded border border-gray-400" placeholder="Enter Username"></input>
-                                <button className="rounded w-36 py-2 mr-2 bg-slimgreen text-white mb-auto mt-auto px-4">Link</button>
+                            <div className="flex flex-col md:flex-row gap-2">
+                                <input type="text" className="pl-2 h-8 mt-auto mb-auto rounded border border-gray-400" placeholder="Enter Username" style={{ width: '144px' }} ></input>
+                                <button className="rounded w-auto md:w-36 py-2 mr-2 bg-slimgreen text-white mb-auto mt-auto px-4">Link</button>
                             </div>
                         </div>
                         <div className="flex flex-row items-center justify-between gap-4">
                             <div className="flex flex-row items-center gap-2 h-12 text-black mb-auto mt-auto px-2">
                                 <DribbbleIcon></DribbbleIcon>Dribbble</div>
-                            <div className="flex flex-row gap-2">
-                                <input type="text" className="pl-2 h-8 mt-auto mb-auto rounded border border-gray-400" placeholder="Enter Username"></input>
-                                <button className="rounded w-36 py-2 mr-2 bg-slimgreen text-white mb-auto mt-auto px-4">Link</button>
+                            <div className="flex flex-col md:flex-row gap-2">
+                                <input type="text" className="pl-2 h-8 mt-auto mb-auto rounded border border-gray-400" placeholder="Enter Username" style={{ width: '144px' }}></input>
+                                <button className="rounded w-auto md:w-36 py-2 mr-2 bg-slimgreen text-white mb-auto mt-auto px-4">Link</button>
                             </div>
                         </div>
                     </div>

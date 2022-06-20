@@ -131,7 +131,7 @@ function Header() {
               </DropdownItem>
             </Dropdown>
           </li>
-          <div className="flex flex-col">
+          <div className="flex-col hidden md:flex">
             <span className="text-base text-black">Leslie Alexander</span>
             <span className="text-base text-slimgreen">UI UX Designer</span>
           </div>

@@ -8,7 +8,7 @@ import RoundIcon from '../components/RoundIcon'
 function Profile() {
   return (
     <>
-      <div className="flex flex-col bg-white mx-12 my-12 px-16 py-8">
+      <div className="flex flex-col bg-white my-12 px-8 py-8 overflow-hidden">
         <div className="flex flex-row">
           <div>
             <RoundIcon

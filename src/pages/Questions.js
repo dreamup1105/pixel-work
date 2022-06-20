@@ -16,8 +16,8 @@ function Questions() {
         localStorage.setItem('jobpos', jobtype);
     }
     return (
-        <div className="flex items-center justify-center min-h-screen p-6 bg-gray-300">
-            <div className="question-setion w-2/5 bg-white border rounded flex flex-col p-5">
+        <div className="flex items-center justify-center min-h-screen p-6" style={{ backgroundColor: '#e0e0e0' }}>
+            <div className="question-setion bg-white border rounded flex flex-col p-5" style={{ width: 524 }}>
                 <div className="question text-left px-5">
                     <span className="text-black-400 text-3xl">What type of Lorem ipusm is dummy text?</span>
                 </div>
@@ -34,9 +34,11 @@ function Questions() {
                     </button>
                 </div>
                 <div className="next-btn">
-                    <Button tag={Link} to="/app" onClick={() => setType()} block className="w-full h-12 mt-4 bg-slimgreen rounded text-white mb-auto px-2">
-                        Next
-                    </Button>
+                    <Link className="mb-auto mt-auto" to="/app">
+                        <button onClick={() => setType()} block className="w-full h-12 mt-4 bg-slimgreen rounded text-white mb-auto px-2">
+                            Next
+                        </button>
+                    </Link>
                 </div>
             </div>
         </div>
